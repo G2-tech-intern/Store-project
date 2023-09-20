@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function MainNavigation() {
     return <header>
         <nav>
             <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/product'>product</Link></li>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/product'>product</NavLink></li>
 
             </ul>
         </nav> 
