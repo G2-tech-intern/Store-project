@@ -1,2 +1,2 @@
 const Application = require("./app/server")
-new Application(5000, "mongodb://localhost:27017/StoreDB")
+new Application(3000, "mongodb://localhost:27017/Store_project")
