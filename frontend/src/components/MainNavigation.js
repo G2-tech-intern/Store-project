@@ -8,9 +8,7 @@ function MainNavigation() {
                 <li><Link to='/product'>product</Link></li>
 
             </ul>
-        </nav>
-
-        
+        </nav> 
     </header>
     
 }
