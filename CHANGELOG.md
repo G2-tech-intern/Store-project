@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/G2-tech-intern/Store-project/compare/1.1.0...1.2.0) (2023-09-21)
+
+
+### Features
+
+* handel html page ([3b83c3e](https://github.com/G2-tech-intern/Store-project/commit/3b83c3e184af4d88c41c780f35f391b046b8cf8c))
+
 # [1.1.0](https://github.com/G2-tech-intern/Store-project/compare/1.0.0...1.1.0) (2023-09-21)
 
 
