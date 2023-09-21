@@ -86,3 +86,44 @@
  *              200:
  *                  description: success
  */
+
+
+/**
+ * @swagger
+ *  /admin/products/remove/{id}:
+ *      delete:
+ *          tags: [Product(AdminPanel)]
+ *          summary: delete one product
+ *          parameters:
+ *              -   in: path
+ *                  name: id
+ *                  type: string
+ *                  required: true
+ *                  description: object id of product
+ *          responses:
+ *              200:
+ *                  description: success
+ */
+
+/**
+ * @swagger
+ *  /admin/products/add:
+ *      post:
+ *          tags: [Product(AdminPanel)]
+ *          summary: create and save product
+ *          requestBody:
+ *              required: true
+ *              content:
+ *                  multipart/form-data:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Product'
+ *
+ *          responses:
+ *              StatusCodes.CREATED:
+ *                  description: created new Product
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              $ref: '#/definitions/publicDefinition'
+ *
+ */
