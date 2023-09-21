@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/G2-tech-intern/Store-project/compare/1.2.0...1.3.0) (2023-09-21)
+
+
+### Features
+
+* changes ([dead132](https://github.com/G2-tech-intern/Store-project/commit/dead1328b8a5846d3490bfa9f45332fe3338f7b5))
+
 # [1.2.0](https://github.com/G2-tech-intern/Store-project/compare/1.1.0...1.2.0) (2023-09-21)
 
 
