@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/G2-tech-intern/Store-project/compare/1.3.0...1.4.0) (2023-09-21)
+
+
+### Features
+
+* handel auth section ([2e4646b](https://github.com/G2-tech-intern/Store-project/commit/2e4646bf41e4c1ab2081180ba026df1655284dd6))
+
 # [1.3.0](https://github.com/G2-tech-intern/Store-project/compare/1.2.0...1.3.0) (2023-09-21)
 
 
