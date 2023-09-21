@@ -13,7 +13,11 @@ router.post(
     ProductController.addProduct
 );
 
-// router.patch("/edit/:id");
+router.patch(
+    "/edit/:id",
+    uploadFile.array("images", 10),
+    ProductController.editProduct
+);
 
 router.delete("/remove/:id" , ProductController.removeProduct);
 

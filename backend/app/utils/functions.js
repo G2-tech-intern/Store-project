@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 function ListOfImagesFromRequest(files, fileUploadPath) {
     if (files?.length > 0) {
         return files
@@ -9,6 +9,11 @@ function ListOfImagesFromRequest(files, fileUploadPath) {
     }
 }
 
+function copyObject(object) {
+    return JSON.parse(JSON.stringify(object));
+}
+
 module.exports = {
     ListOfImagesFromRequest,
+    copyObject,
 };

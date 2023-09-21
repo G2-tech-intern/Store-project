@@ -6,8 +6,11 @@ const { ProductModel } = require("../../../../models/product.model");
 const path = require("path");
 const createHttpError = require("http-errors");
 const { StatusCodes: StatusCodes } = require("http-status-codes");
-const { ListOfImagesFromRequest } = require("../../../../utils/functions");
-const {MongoIDPattern} = require('../../../../utils/constant');
+const {
+    ListOfImagesFromRequest,
+    copyObject,
+} = require("../../../../utils/functions");
+const { MongoIDPattern } = require("../../../../utils/constant");
 
 class ProductController extends Controller {
     async addProduct(req, res, next) {
@@ -17,14 +20,8 @@ class ProductController extends Controller {
                 req.body.fileUploadPath
             );
             const productBody = await addProductSchema.validateAsync(req.body);
-            const {
-                title,
-                desc,
-                count,
-                price,
-            } = productBody;
+            const { title, desc, count, price } = productBody;
             const supplier = req?.user?._id || "nima";
-
 
             const product = await ProductModel.create({
                 title,
@@ -48,6 +45,33 @@ class ProductController extends Controller {
     }
     async editProduct(req, res, next) {
         try {
+            const { id } = req.params;
+            const product = await this.findProduct(id);
+            const data = copyObject(req.body);
+            data.images = ListOfImagesFromRequest(
+                req?.files || [],
+                req.body.fileUploadPath
+            );
+            Object.keys(data).forEach((key) => {
+                if (!Object.values(key)) {
+                    delete Object.keys(key);
+                }
+                if (Array.isArray(data[key]) && data[key].length == 0)
+                    delete data[key];
+            });
+            const updateResult = await ProductModel.updateOne(
+                { _id: product._id },
+                { $set: data }
+            );
+            if (updateResult.modifiedCount == 0) {
+                throw createHttpError.InternalServerError(
+                    "product update failed"
+                );
+            }
+            return res.status(StatusCodes.OK).json({
+                statusCode: StatusCodes.OK,
+                message: "product updated",
+            });
         } catch (err) {
             next(err);
         }
@@ -67,7 +91,6 @@ class ProductController extends Controller {
                 message: "product delete successfully",
             });
         } catch (err) {
-            console.log(err);
             next(err);
         }
     }
@@ -104,9 +127,7 @@ class ProductController extends Controller {
     }
 
     async findProduct(id) {
-        console.log({id});
         const product = await ProductModel.findById(id);
-        console.log(product);
         if (!product)
             throw new createHttpError.NotFound(
                 "product woith this id not found"

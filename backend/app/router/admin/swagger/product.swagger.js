@@ -10,6 +10,7 @@
  *                  -   desc
  *                  -   price
  *                  -   count
+ *                  -   images
  *              properties:
  *                  title:
  *                      type: string
@@ -126,4 +127,27 @@
  *                          schema:
  *                              $ref: '#/definitions/publicDefinition'
  *
+ */
+
+/**
+ * @swagger
+ *  /admin/products/edit/{id}:
+ *      patch:
+ *          tags: [Product(AdminPanel)]
+ *          summary: create and save product
+ *          requestBody:
+ *              required: true
+ *              content:
+ *                  multipart/form-data:
+ *                      schema:
+ *                          $ref: '#/components/schemas/edit-Product'
+ *          parameters:
+ *              -   in: path
+ *                  name: id
+ *                  type: string
+ *                  required: true
+ *                  description: id of product for updating
+ *          responses:
+ *              200:
+ *                  description: created new Product
  */
