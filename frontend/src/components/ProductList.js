@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import ProductCart from "./ProductCart";
 
 import styles from "./ProductList.module.css";
 
 const products = [
   {
+    id: 1,
     title: "product1",
     description:
       "this is a product description and its tells all about product that make you to buy its please buy it",
@@ -11,6 +13,7 @@ const products = [
     img: "../../img/shoe.avif",
   },
   {
+    id: 2,
     title: "product1",
     description:
       "this is a product description and its tells all about product that make you to buy its please buy it",
@@ -18,6 +21,7 @@ const products = [
     img: "../../img/shoe.avif",
   },
   {
+    id: 3,
     title: "product1",
     description:
       "this is a product description and its tells all about product that make you to buy its please buy it",
@@ -25,6 +29,7 @@ const products = [
     img: "../../img/shoe.avif",
   },
   {
+    id: 4,
     title: "product1",
     description:
       "this is a product description and its tells all about product that make you to buy its please buy it",
@@ -32,6 +37,7 @@ const products = [
     img: "../../img/shoe.avif",
   },
   {
+    id: 5,
     title: "product1",
     description:
       "this is a product description and its tells all about product that make you to buy its please buy it",

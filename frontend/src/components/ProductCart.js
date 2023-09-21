@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./ProductCart.module.css";
 
 
@@ -10,6 +11,7 @@ function ProductCart(props) {
       <img className={styles.cartImg} src={MyImage}></img>
       <p>{props.product.title}</p>
       <span>price: {props.product.price}</span>
+      <Link to={`product/${props.product.id}`}>details</Link>
     </li>
   );
 }

@@ -8,7 +8,6 @@ function HomePage() {
   return (
     <>
     <main className={styles.container}>
-
       <Hero />
       <h1>Products :</h1>
       <ProductList />
