@@ -1,4 +1,4 @@
-const { RandomNumberGenerator, SignAccessToken, verifyRefreshToken, SignRefreshToken } = require('../../../../utils/function');
+const { RandomNumberGenerator, SignAccessToken, verifyRefreshToken, SignRefreshToken } = require('../../../../utils/functions');
 const { checkOTPSchema , getOTPSchema } = require('../../../validators/user/auth.schema');
 const { StatusCodes: HttpStatus } = require("http-status-codes");
 const { UserModel } = require('../../../../models/user.model');

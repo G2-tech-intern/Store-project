@@ -1,4 +1,4 @@
-const { deleteInvalidPropertyInObject, copyObject } = require("../../../../utils/function");
+const { deleteInvalidPropertyInObject, copyObject } = require("../../../../utils/functions");
 const {StatusCodes : HttpStatus} = require("http-status-codes");
 const { UserModel } = require("../../../../models/user.model");
 const Controller = require("../../controller");
