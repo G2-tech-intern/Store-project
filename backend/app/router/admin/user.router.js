@@ -1,7 +1,7 @@
 const { AdminUserController } = require("../../http/controllers/admin/user/user.controller");
 const router = require("express").Router();
 
-router.patch("/update-profile" 
+router.patch("/update-profile",VerifyAccessToken 
     , AdminUserController.updateUserProfile)
 router.get("/list" 
     , AdminUserController.getAllUsers)
