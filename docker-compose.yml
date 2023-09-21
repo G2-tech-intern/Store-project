@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend 
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb 
+    environment:
+      - MONGODB_URI=mongodb://root:XGqfGniSRJO8sdDeibGYmIuu@aberama.iran.liara.ir:33605/my-app?authSource=admin
+  frontend:
+    build:
+      context: ./frontend 
+    ports:
+      - "3000:3000" 
+  mongodb:
+    image: mongo:latest 
+    ports:
+      - "27017:27017" 
