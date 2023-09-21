@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/G2-tech-intern/Store-project/compare/1.4.0...1.5.0) (2023-09-21)
+
+
+### Features
+
+* fix auth ([155a2f0](https://github.com/G2-tech-intern/Store-project/commit/155a2f0cc0e2e9d05a73f1c56d0cc9aa5a418ee1))
+
 # [1.4.0](https://github.com/G2-tech-intern/Store-project/compare/1.3.0...1.4.0) (2023-09-21)
 
 
