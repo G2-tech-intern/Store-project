@@ -1,5 +1,5 @@
 const { ProductController } = require("../../http/controllers/admin/product/product.controller");
-const { VerifyAccessToken } = require("../http/middlewares/verifyAccessToken");
+const { VerifyAccessToken } = require("../../http/middlewares/verifyAccessToken");
 const { uploadFile } = require("../../utils/multer");
 
 const router = require("express").Router();
