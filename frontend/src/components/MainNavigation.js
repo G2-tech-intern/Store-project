@@ -6,7 +6,7 @@ function MainNavigation() {
   return (
     <header className={styles.header}>
       <div className={`${styles.navBar} ${styles.container}`}>
-        <span>LOGO</span>
+        <span  className={styles.navLogo}>LOGO</span>
         <nav className={styles.navItems}>
           <ul className={styles.navList}>
             <li>
@@ -21,7 +21,7 @@ function MainNavigation() {
             </li>
             <li>
               <NavLink className={styles.navBtnLink} to="admin/">
-                product
+                Login
               </NavLink>
             </li>
           </ul>

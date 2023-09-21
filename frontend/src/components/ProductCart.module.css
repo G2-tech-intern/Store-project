@@ -10,6 +10,8 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  text-align: left;
 }
 
 .cart:hover {
@@ -20,4 +22,28 @@
 .cartImg{
     height: 180px;
     width: 180px;
+    border-radius: 15px;
+
+}
+
+.cartImg{
+  
+}
+.cartTitle{
+  font-size: 18px;
+}
+.cartPrice{
+  font-weight: 700;
+  font-size: 20px;
+}
+.cartBtn{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 100px;
+  background-color: #1971c2;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+
 }

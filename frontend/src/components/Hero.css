@@ -1,0 +1,96 @@
+
+  
+  .section-hero {
+    /* background-color: #c3fae8; */
+    padding: 4.8rem 0;
+    margin-bottom: 6.4rem;
+  }
+  
+  .hero {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 3.2rem;
+  }
+  .main-heading {
+    text-align: left;
+    color: hsl(210, 11%, 15%);
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    line-height: 1.2;
+    animation: moveInLeft 1s ease-out;
+    /* animation-fill-mode: backwards; */
+  
+  }
+  .animated-p{
+    animation: moveInRight 1s ease-out;
+    /* animation-fill-mode: backwards; */
+  }
+  
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    /* 80% {
+      transform: translateX(20px);
+    } */
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    /* 80% {
+      transform: translateX(-20px);
+    } */
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(4rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+
+
+  .btn-animated {
+    animation: moveInBottom 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  
+  .hero-text {
+    text-align: left;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    margin-bottom: 4.4rem;
+  }
+  .more-btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+    color: #087f5b;
+  }
+  
+  .hero-img {
+    width: 100%;
+  }
+  

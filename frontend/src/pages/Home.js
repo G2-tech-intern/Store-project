@@ -16,7 +16,7 @@ function HomePage() {
       <main className={styles.container}>
         {/* <img src={`http://localhost:5000/${data.data.products[0].images[0]}`}></img> */}
         <Hero />
-        <h1>Products :</h1>
+        <h1 className={styles.pHeader}>Best Seling Products</h1>
         <ProductList products={data.data.products} />
       </main>
     </>
