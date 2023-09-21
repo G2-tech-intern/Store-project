@@ -43,7 +43,6 @@ class ProductController extends Controller {
                 },
             });
         } catch (err) {
-            console.log(err);
             next(err);
         }
     }
@@ -56,13 +55,10 @@ class ProductController extends Controller {
     async removeProduct(req, res, next) {
         try {
             const { id } = req.params;
-            console.log(RegExp().test(MongoIDPattern , id));
             const product = await this.findProduct(id);
-            console.log("up to here");
             const deleteResult = await ProductModel.deleteOne({
                 _id: product.id,
             });
-            console.log(deleteResult);
             if (deleteResult.deletedCount == 0) {
                 throw new createHttpError.InternalServerError("delete failed");
             }
