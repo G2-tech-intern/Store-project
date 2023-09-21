@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/G2-tech-intern/Store-project/compare/1.6.0...1.7.0) (2023-09-21)
+
+
+### Features
+
+* handel docker file and compose in this project ([733237f](https://github.com/G2-tech-intern/Store-project/commit/733237fb8655786813b2e90531ca0f18d4426af6))
+
 # [1.6.0](https://github.com/G2-tech-intern/Store-project/compare/1.5.0...1.6.0) (2023-09-21)
 
 
