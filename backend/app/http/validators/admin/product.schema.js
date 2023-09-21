@@ -1,5 +1,4 @@
 const Joi = require("@hapi/joi");
-const { MongoIDPattern } = require("../../../utils/constant");
 const addProductSchema = Joi.object({
     title: Joi.string().min(3).max(30),
     desc: Joi.string(),
