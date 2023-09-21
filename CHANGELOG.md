@@ -1,3 +1,13 @@
+# [1.6.0](https://github.com/G2-tech-intern/Store-project/compare/1.5.0...1.6.0) (2023-09-21)
+
+
+### Features
+
+* get list of products via API ([79f13c9](https://github.com/G2-tech-intern/Store-project/commit/79f13c90c2eb25fc49515a040bc5e4243d2bf991))
+* get single product detail and show ([8e63efe](https://github.com/G2-tech-intern/Store-project/commit/8e63efe2d83ef1c6f183fbe676623a4249ab00c4))
+* product detail style completed ([f0886ae](https://github.com/G2-tech-intern/Store-project/commit/f0886ae7e2ba3f13545c3929b6073a71607ebfe7))
+* style homepage ([d53fee1](https://github.com/G2-tech-intern/Store-project/commit/d53fee100d88fefd624bcf5a83ca044d8844e144))
+
 # [1.5.0](https://github.com/G2-tech-intern/Store-project/compare/1.4.0...1.5.0) (2023-09-21)
 
 
