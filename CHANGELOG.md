@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/G2-tech-intern/Store-project/compare/1.0.0...1.1.0) (2023-09-21)
+
+
+### Features
+
+* fix swagger for user section ([8829ba3](https://github.com/G2-tech-intern/Store-project/commit/8829ba3e35c89dce7ce83d8680fcbca810ac2d9c))
+
 # 1.0.0 (2023-09-21)
 
 
