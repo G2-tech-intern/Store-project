@@ -46,8 +46,16 @@ function ProductList() {
     <>
       <section className={styles.container}>
         <div>
-          <ul>
+          <ul className={styles.productList}>
             <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+            <ProductCart product={products[0]}/>
+
           </ul>
         </div>
       </section>

@@ -1,4 +1,23 @@
 .container {
-    width: 1000px;
-    margin: 0 auto;
-  }
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.cart {
+  border-radius: 12px;
+  background-color: #a5d8ff;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart:hover {
+  background-color: #4dabf7;
+  box-shadow: 0 12px 24px rgba(34, 139, 230, 0.5);
+}
+
+.cartImg{
+    height: 180px;
+    width: 180px;
+}

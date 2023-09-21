@@ -1,5 +1,13 @@
+import styles from './Footer.module.css';
+
+
 function Footer() {
-    return <h1>Footer</h1>
+    return <footer className={styles.footer}>
+        <div className={styles.container}>
+            <h1>dflsadfsjdf</h1>
+        </div>
+
+    </footer>
 }
 
 export default Footer  ;
