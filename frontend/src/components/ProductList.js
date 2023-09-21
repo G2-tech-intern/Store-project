@@ -3,64 +3,22 @@ import ProductCart from "./ProductCart";
 
 import styles from "./ProductList.module.css";
 
-const products = [
-  {
-    id: 1,
-    title: "product1",
-    description:
-      "this is a product description and its tells all about product that make you to buy its please buy it",
-    price: 50,
-    img: "../../img/shoe.avif",
-  },
-  {
-    id: 2,
-    title: "product1",
-    description:
-      "this is a product description and its tells all about product that make you to buy its please buy it",
-    price: 50,
-    img: "../../img/shoe.avif",
-  },
-  {
-    id: 3,
-    title: "product1",
-    description:
-      "this is a product description and its tells all about product that make you to buy its please buy it",
-    price: 50,
-    img: "../../img/shoe.avif",
-  },
-  {
-    id: 4,
-    title: "product1",
-    description:
-      "this is a product description and its tells all about product that make you to buy its please buy it",
-    price: 50,
-    img: "../../img/shoe.avif",
-  },
-  {
-    id: 5,
-    title: "product1",
-    description:
-      "this is a product description and its tells all about product that make you to buy its please buy it",
-    price: 50,
-    img: "../../img/shoe.avif",
-  },
-];
-console.log(products[0])
 
-function ProductList() {
+// console.log(products[0])
+
+function ProductList(props) {
+  console.log(props.products[0].id)
   return (
     <>
       <section className={styles.container}>
         <div>
           <ul className={styles.productList}>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
-            <ProductCart product={products[0]}/>
+            {
+              props.products.map((product) => {
+                console.log([product])
+                return <ProductCart product={product} key={product.id}/>
+              })
+            }
 
           </ul>
         </div>

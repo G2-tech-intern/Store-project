@@ -7,7 +7,7 @@ import MyImage from './img.jpeg';
 
 function ProductCart(props) {
   return (
-    <li className={styles.cart}>
+    <li className={styles.cart} key={props.product.id}>
       <img className={styles.cartImg} src={MyImage}></img>
       <p>{props.product.title}</p>
       <span>price: {props.product.price}</span>
