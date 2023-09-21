@@ -5,7 +5,7 @@ function ProductDetailCart(props) {
   return (
     <section className={styles.productSection}>
       <div className={styles.productDetails}>
-        <img className={styles.productImg} src={shoe}></img>
+        <img className={styles.productImg} src={shoe} alt="fdffdad"></img>
         <div className={styles.productInfo}>
           <h1 className={styles.productTitle}>{props.product.title}</h1>
           <span className={styles.productPrice}>${props.product.price}</span>

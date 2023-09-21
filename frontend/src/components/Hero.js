@@ -1,6 +1,6 @@
 import "./Hero.css";
 
-import heroImg from './h.png'
+import heroImg from "./h.png";
 
 function Hero() {
   return (
@@ -27,7 +27,7 @@ function Hero() {
           </p>
         </div>
         <div className="hero-image-box">
-          <img src={heroImg} alt="hero image" class="hero-img" />
+          <img src={heroImg} alt="hero " class="hero-img"/>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 
-import styles from "./Product.module.css";
+// import styles from "./Product.module.css";
 
 import ProductDetailCart from "../components/ProductDetailCart";
 
