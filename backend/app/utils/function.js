@@ -1,5 +1,5 @@
 const { ACCESS_TOKEN_SECRET_KEY, REFRESH_TOKEN_SECRET_KEY } = require("./constant");
-const { UserModel } = require("../models/users");
+const { UserModel } = require("../models/user.model");
 const createError = require("http-errors");
 const JWT = require("jsonwebtoken");
 const path = require("path");
@@ -76,9 +76,7 @@ module.exports = {
     deleteInvalidPropertyInObject,
     ListOfImagesFromRequest,
     RandomNumberGenerator,
-    verifyRefreshToken,
     removeFieldEmpty,
-    SignRefreshToken,
     deleteFilePublic,
     SignAccessToken,
     copyObject,
