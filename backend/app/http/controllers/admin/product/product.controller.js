@@ -47,9 +47,24 @@ class ProductController extends Controller {
     }
     async getOneProduct(req, res, next) {
         try {
+            const { id } = req.params;
+            const product = await this.findProduct(id);
+            return res.status(StatusCodes.OK).json({
+                statusCode: StatusCodes.OK,
+                data: { product },
+            });
         } catch (err) {
             next(err);
         }
+    }
+
+    async findProduct(id) {
+        const product = await ProductModel.findById({ id });
+        if (!product)
+            throw new createHttpError.NotFound(
+                "product woith this id not found"
+            );
+        return product;
     }
 }
 
