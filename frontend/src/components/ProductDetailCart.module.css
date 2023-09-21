@@ -1,0 +1,11 @@
+.productDetails{
+    width: 800px;
+    margin: 90px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.productImg {
+    width: 300px;
+}

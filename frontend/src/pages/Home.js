@@ -9,7 +9,7 @@ import styles from "./Home.module.css";
 function HomePage() {
   const data = useLoaderData();
 
-  console.log(data.data.products)
+  // console.log(data.data.products)
 
   return (
     <>
