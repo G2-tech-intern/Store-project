@@ -1,0 +1,33 @@
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.header {
+  padding: 30px 0;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBtnLink:link,
+.navBtnLink:visited {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.navBtnLink:hover,
+.navBtnLink:active {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
