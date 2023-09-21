@@ -28,7 +28,7 @@ class ProductController extends Controller {
     }
     async getAllProducts(req, res, next) {
         try {
-            return res.json({ nima: "hi" });
+            const query = req.query
         } catch (err) {
             next(err);
         }
