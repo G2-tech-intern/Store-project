@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #0c6cb0;
+    color: white;
 }
 
 .main{
@@ -14,20 +16,37 @@
     flex-direction: column;
 }
 
+
 .product{
     margin: 1rem ;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 90%;
-    border-bottom: 1px solid black;
-    padding-bottom: .5rem;
+    width: 85%;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+}
+
+
+img , .id , .price , .count , .image{
+    width: 5%;
+}
+.price , .count{
+    margin-right: 1rem;
+}
+
+.title{
+    width: 25%;
+}
+.desc{
+    width: 40%;
 }
 
 .buttons{
     width: 15%;
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid black; */
+    margin-left: 2rem;
 }
 
 
@@ -39,7 +58,7 @@
     height: 3rem;
     color: white;
     background-color: #0c6cb0;
-    border: 1px solid #0c6cb0;
+    border: 3px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,14 +75,38 @@
 
 .buttons button{
     background-color: #0c6cb0;
-    border: 1px solid #0c6cb0;
+    border: 1px solid white;
     color: white;
-    padding: .3rem .5rem;
+    padding: .4rem .6rem;
     border-radius: 16px;
     cursor: pointer;
+    margin-right: .5rem
+}
+.buttons button:hover{
+    border: 1px solid #0c6cb0;
+    background-color: white;
+    color: #0c6cb0;
+    cursor: pointer;
+    transition: .5s ;
 }
 
 .header{
     font-size: 20px;
     font-weight: bold;
+}
+
+.title , .desc , .price , .count ,  .id{
+
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+
+
+
+img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    box-sizing: content-box;
 }
