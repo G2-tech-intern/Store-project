@@ -46,10 +46,12 @@ class UserAuthController extends Controller {
             if (+user.otp.expiresIn < now)
                 throw createError.Unauthorized("Your code has expired");
             const accessToken = await SignAccessToken(user._id);
+            const role = user.Role;
             return res.status(HttpStatus.OK).json({
                 statusCode: HttpStatus.OK,
                 data: {
                     accessToken,
+                    role
                 },
             });
         } catch (error) {
