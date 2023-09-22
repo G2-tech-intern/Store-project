@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/G2-tech-intern/Store-project/compare/1.7.0...1.8.0) (2023-09-22)
+
+
+### Features
+
+* authentication logic ([a7c2ce9](https://github.com/G2-tech-intern/Store-project/commit/a7c2ce923d0a8accf2df1a92faa89d437bb23720))
+
 # [1.7.0](https://github.com/G2-tech-intern/Store-project/compare/1.6.0...1.7.0) (2023-09-21)
 
 
