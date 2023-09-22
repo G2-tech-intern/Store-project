@@ -37,7 +37,7 @@ export async function loader({ request, params }) {
   const response = await fetch("http://localhost:5000/admin/products/list");
 
   if (!response.ok) {
-    console.log("erorrr");
+    console.log("error loading");
   } else {
     const resData = await response;
     return resData;
