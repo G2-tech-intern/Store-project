@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/G2-tech-intern/Store-project/compare/1.10.0...1.11.0) (2023-09-22)
+
+
+### Features
+
+* make changes ([920177e](https://github.com/G2-tech-intern/Store-project/commit/920177ecbfddea00b4d4db898e52872192230646))
+
 # [1.10.0](https://github.com/G2-tech-intern/Store-project/compare/1.9.0...1.10.0) (2023-09-22)
 
 
