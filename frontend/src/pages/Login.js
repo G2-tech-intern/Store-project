@@ -25,13 +25,7 @@ function LoginPage() {
 export default LoginPage;
 
 export async function action({ request }) {
-  //TODO
-  //   const searchParams = new URL(request.url).searchParams;
-  //   const mode = searchParams.get("mode") || "login";
 
-  //   if (mode !== 'login' && mode !=='signup') {
-  //     throw json({message: 'unsopported mode '}, {status: 422})
-  //   }
 
   const formData = await request.formData();
   const phoneNumber = formData.get("phonenumber");

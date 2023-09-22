@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./ProductCart.module.css";
 
 
-import MyImage from './img.jpeg';
+import MyImage from '../img/22.jpg';
 
 
 function ProductCart(props) {

@@ -18,8 +18,8 @@ function OtpPage() {
             required
             className={styles.formInp}
           ></input>
-        </p>
         <button className={styles.formBtn}>Enter Code</button>
+        </p>
         <p>your otp code is: {otpCode}</p>
       </Form>
     </div>
