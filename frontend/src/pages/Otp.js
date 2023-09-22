@@ -53,6 +53,8 @@ export async function action({ request }) {
     console.log("errorrrr");
   } else {
     const token = data.data.accessToken;
+    const role = data.data.role
+    localStorage.setItem("role", role)
     localStorage.setItem("token", token);
     console.log(data.data.accessToken);
     return redirect("/");

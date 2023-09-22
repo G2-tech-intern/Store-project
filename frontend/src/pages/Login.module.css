@@ -1,4 +1,6 @@
 .formSection {
+  height: 70vh;
+  /* margin-bottom: 180px; */
 }
 .form {
   background-color: #74c0fc;
