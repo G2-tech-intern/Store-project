@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/G2-tech-intern/Store-project/compare/1.16.0...1.17.0) (2023-09-22)
+
+
+### Features
+
+* sytle correction in home page ([478252d](https://github.com/G2-tech-intern/Store-project/commit/478252d6bb01ed092426fc5e230bb80916434cb1))
+
 # [1.16.0](https://github.com/G2-tech-intern/Store-project/compare/1.15.0...1.16.0) (2023-09-22)
 
 
