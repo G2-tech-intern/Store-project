@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/G2-tech-intern/Store-project/compare/1.11.0...1.12.0) (2023-09-22)
+
+
+### Features
+
+* fix error ([e40becc](https://github.com/G2-tech-intern/Store-project/commit/e40becce4bcac919522f59fa5ecbf3cd1c00465f))
+
 # [1.11.0](https://github.com/G2-tech-intern/Store-project/compare/1.10.0...1.11.0) (2023-09-22)
 
 
