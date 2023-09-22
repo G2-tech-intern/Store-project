@@ -34,9 +34,6 @@ export async function action({ request }) {
   const searchParams = new URL(request.url).searchParams;
   const phoneNumber = searchParams.get("mobile");
 
-  //   if (mode !== 'login' && mode !=='signup') {
-  //     throw json({message: 'unsopported mode '}, {status: 422})
-  //   }
 
   const formData = await request.formData();
   const otpCode = formData.get("code");

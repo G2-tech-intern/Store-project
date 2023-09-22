@@ -9,6 +9,8 @@ import LoginPage, {action as loginAction } from "./pages/Login";
 import OtpPage, {action as otpAction} from "./pages/Otp";
 import {loader as tokenLoader} from './util/auth.js'
 import {action as logoutAction} from './pages/Logout'
+import AddProductPage, {action as addAction} from "./pages/AddProduct";
+import EditProductPage from "./pages/EditProduct";
 
 const router = createBrowserRouter([
   {
@@ -19,11 +21,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage />, loader: homePageLoader },
-      { path: "product/:productId", element: <ProductPage />, loader: productDetailsPageLoader },
+      {path: "product/:productId", children:[
+        { path: "", element: <ProductPage />, loader: productDetailsPageLoader },
+        { path: "edit", element: <EditProductPage/>}
+      ]},
       { path: "admin", element: <AdminPage />, loader: adminPageLoader },
       { path: "login", element: <LoginPage />, action: loginAction},
       { path: "otp", element: <OtpPage/>, action: otpAction},
       { path: "logout", action: logoutAction},
+      { path: "add", element: <AddProductPage/>, action: addAction}
 
     ],
   },
