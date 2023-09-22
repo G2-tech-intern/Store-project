@@ -9,7 +9,7 @@ function ProductPage() {
 
   // console.log(data.data.product);
 
-  return <ProductDetailCart product={data.data.product} />;
+  return <ProductDetailCart product={data.data.product} id="product"/>;
 }
 
 export default ProductPage;

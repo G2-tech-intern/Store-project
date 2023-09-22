@@ -7,11 +7,15 @@ import ErrorPage from "./pages/Error";
 import AdminPage from "./pages/Admin";
 import LoginPage, {action as loginAction } from "./pages/Login";
 import OtpPage, {action as otpAction} from "./pages/Otp";
+import {loader as tokenLoader} from './util/auth.js'
+import {action as logoutAction} from './pages/Logout'
 
 const router = createBrowserRouter([
   {
     path: "/",
+    id: 'root',
     element: <RootLayout />,
+    loader: tokenLoader, 
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage />, loader: homePageLoader },
@@ -19,6 +23,7 @@ const router = createBrowserRouter([
       { path: "admin", element: <AdminPage /> },
       { path: "login", element: <LoginPage />, action: loginAction},
       { path: "otp", element: <OtpPage/>, action: otpAction},
+      { path: "logout", action: logoutAction},
 
     ],
   },
