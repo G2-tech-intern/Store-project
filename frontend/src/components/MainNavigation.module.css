@@ -1,6 +1,7 @@
 .navList {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 .header {
@@ -40,4 +41,25 @@
   font-weight: 700;
 }
 
-  
+.navBtn {
+  /* margin-top: 20px;
+  border: none;
+  width: 80px;
+  padding: 10px 15px;
+  border-radius: 15PX;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1971c2;
+  box-shadow: 0 12px 24px rgba(34, 139, 230, 0.8); */
+  border: none;
+  background-color: #1c7ed6;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff !important;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(34, 139, 230, 0.5); 
+
+
+}

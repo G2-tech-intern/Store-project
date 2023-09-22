@@ -1,0 +1,40 @@
+.formSection {
+}
+.form {
+  background-color: #74c0fc;
+  border-radius: 15px;
+  width: 400px;
+  margin: 90px auto;
+  padding: 50px 20px;
+  box-shadow: 0 12px 24px rgba(34, 139, 230, 0.5);
+
+}
+.form p {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.formLabel {
+  font-weight: 700;
+  color: #fff;
+}
+.formInp {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-shadow: 0 12px 24px rgba(34, 139, 230, 0.5);
+
+}
+.formBtn {
+  margin-top: 20px;
+  border: none;
+  width: 80px;
+  padding: 10px 15px;
+  border-radius: 15PX;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1971c2;
+  box-shadow: 0 12px 24px rgba(34, 139, 230, 0.8);
+
+}

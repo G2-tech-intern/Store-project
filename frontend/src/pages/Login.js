@@ -1,20 +1,22 @@
-import { Form, json, redirect } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 
+import styles from "./Login.module.css";
 
 function LoginPage() {
   return (
-    <div>
-      <Form method="post">
+    <div className={styles.formSection}>
+      <Form method="post" className={styles.form}>
         <p>
-          <label>Phone Number</label>
+          <label className={styles.formLabel}>Phone Number</label>
           <input
             id="phonenumber"
             type="text"
             name="phonenumber"
             required
+            className={styles.formInp}
           ></input>
+          <button className={styles.formBtn}>Login</button>
         </p>
-        <button>Login</button>
       </Form>
     </div>
   );
@@ -35,7 +37,7 @@ export async function action({ request }) {
   const phoneNumber = formData.get("phonenumber");
   console.log(phoneNumber);
   localStorage.setItem("phonenumber", phoneNumber);
- 
+
   const response = await fetch("http://localhost:5000/user/get-otp", {
     method: "POST",
     headers: {
@@ -52,12 +54,8 @@ export async function action({ request }) {
   if (!response.ok) {
     console.log("errorrrr");
   } else {
-
-      localStorage.setItem("otp", data.data.code );
-      const otp = localStorage.getItem('otp')
-    return redirect(`/otp?otp=${otp}&mobile=${phoneNumber}`)
+    localStorage.setItem("otp", data.data.code);
+    const otp = localStorage.getItem("otp");
+    return redirect(`/otp?otp=${otp}&mobile=${phoneNumber}`);
   }
-
 }
-
-

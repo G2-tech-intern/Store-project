@@ -1,4 +1,5 @@
 import { Form, redirect, useSearchParams } from "react-router-dom";
+import styles from "./Login.module.css";
 
 function OtpPage() {
   const [searchParams] = useSearchParams();
@@ -6,13 +7,19 @@ function OtpPage() {
   console.log(searchParams.get("mobile"));
 
   return (
-    <div>
-      <Form method="post">
+    <div className={styles.formSection}>
+      <Form method="post" className={styles.form}>
         <p>
-          <label>Code</label>
-          <input id="code" type="text" name="code" required></input>
+          <label className={styles.formLabel}>Code</label>
+          <input
+            id="code"
+            type="text"
+            name="code"
+            required
+            className={styles.formInp}
+          ></input>
         </p>
-        <button>Login</button>
+        <button className={styles.formBtn}>Enter Code</button>
         <p>your otp code is: {otpCode}</p>
       </Form>
     </div>
@@ -34,9 +41,6 @@ export async function action({ request }) {
   const formData = await request.formData();
   const otpCode = formData.get("code");
 
-
-
-
   const response = await fetch("http://localhost:5000/user/check-otp", {
     method: "POST",
     headers: {
@@ -51,9 +55,8 @@ export async function action({ request }) {
   if (!response.ok) {
     console.log("errorrrr");
   } else {
-
     const token = data.data.accessToken;
-    localStorage.setItem('token', token)
+    localStorage.setItem("token", token);
     console.log(data.data.accessToken);
     return redirect("/");
   }

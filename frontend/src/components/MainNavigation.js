@@ -1,6 +1,6 @@
 import {
   NavLink,
-  useRouteError,
+
   useRouteLoaderData,
   Form,
 } from "react-router-dom";
@@ -38,12 +38,12 @@ function MainNavigation() {
                   action="/logout"
                   method="post"
                 >
-                  <button>Logout</button>
+                  <button className={styles.navBtn}>Logout</button>
                 </Form>
               </li>
             ) : (
               <li>
-                <NavLink className={styles.navBtnLink} to="login">
+                <NavLink className={`${styles.navBtnLink} ${styles.navBtn}`} to="login">
                   Login
                 </NavLink>
               </li>
