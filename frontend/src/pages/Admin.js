@@ -1,6 +1,37 @@
+import { useLoaderData, Link } from "react-router-dom";
+
 import "./Admin.css";
+import { getAuthToken } from "../util/auth";
 
 function AdminPage() {
+  const data = useLoaderData();
+
+  const handleDelete = async (productId) => {
+    const token = getAuthToken();
+    console.log(token);
+
+    fetch(`http://localhost:5000/admin/products/remove/${productId}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "*/*",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Handle successful response
+          console.log("Product deleted successfully");
+          window.location.reload();
+        } else {
+          // Handle error response
+          console.log("Error deleting product");
+        }
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
+  };
+
   return (
     <div className="main">
       <button className="btn">add product</button>
@@ -14,18 +45,34 @@ function AdminPage() {
           <p className="count">count</p>
           <div className="buttons"></div>
         </div>
-        <div className="product">
-          <p className="id">1</p>
-          <p className="title">shoe</p>
-          {/* <p className="desc">this is shoe</p> */}
-          <p className="price">12$</p>
-          <p className="count">100</p>
-          <div className="buttons">
-            <button className="view-btn">view</button>
-            <button className="edit-btn">edit</button>
-            <button className="remove-btn">remove</button>
-          </div>
-        </div>
+        {/* 
+        {
+              props.products.map((product) => {
+                return <ProductCart product={product} key={product.id}/>
+              })
+            } */}
+
+        {data.data.products.map((product) => {
+          return (
+            <div className="product" key={product.id}>
+              <p className="id">{product.id}</p>
+              <p className="title">{product.title}</p>
+              {/* <p className="desc">this is shoe</p> */}
+              <p className="price">{product.price}</p>
+              <p className="count">{product.count}</p>
+              <div className="buttons">
+                <button
+                  className="delete-btn"
+                  onClick={() => handleDelete(product.id)}
+                >
+                  delete
+                </button>
+                <button className="edit-btn">edit</button>
+                <Link to={`/product/${product.id}`}>show</Link>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
