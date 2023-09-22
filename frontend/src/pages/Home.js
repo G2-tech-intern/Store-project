@@ -16,7 +16,7 @@ function HomePage() {
       <main className={styles.container}>
         {/* <img src={`http://localhost:5000/${data.data.products[0].images[0]}`}></img> */}
         <Hero />
-        <h1 className={styles.pHeader}>Best Seling Products</h1>
+        <h1 className={styles.pHeader}>Best Selling Products</h1>
         <ProductList products={data.data.products} />
       </main>
     </>
@@ -29,7 +29,7 @@ export async function loader({request, params}) {
     const response = await fetch('http://localhost:5000/admin/products/list')
 
     if(!response.ok) {
-    console.log("erorrr")
+    console.log("error loading products")
     } else {
       const resData = await response;
       return resData;

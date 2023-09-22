@@ -52,7 +52,7 @@ export async function action({ request }) {
   const data = await response.json();
   // Handle the response data
   if (!response.ok) {
-    console.log("errorrrr");
+    console.log("error: " + JSON.stringify(response));
   } else {
     localStorage.setItem("otp", data.data.code);
     const otp = localStorage.getItem("otp");
