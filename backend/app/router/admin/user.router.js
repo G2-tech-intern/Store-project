@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 router.patch("/update-profile",VerifyAccessToken 
     , AdminUserController.updateUserProfile)
-router.patch("/delete",VerifyAccessToken 
+router.delete("/delete/:id",VerifyAccessToken 
     , AdminUserController.deleteUser)
 router.get("/list" 
     , AdminUserController.getAllUsers)
