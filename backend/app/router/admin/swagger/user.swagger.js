@@ -112,3 +112,19 @@
  *                          schema: 
  *                              $ref: '#/definitions/publicDefinition'
  */
+/**
+ * @swagger
+ *  /admin/users/delete/{id}:
+ *      delete:
+ *          tags: [Users(Admin-Panel)]
+ *          summary: delete user
+ *          parameters:
+ *              -   in: path
+ *                  name: id
+ *                  type: string
+ *                  required: true
+ *                  description: object id of user
+ *          responses:
+ *              200:
+ *                  description: success
+ */

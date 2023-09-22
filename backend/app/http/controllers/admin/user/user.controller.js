@@ -7,11 +7,8 @@ const { updateProfileUserSchema } = require("../../../validators/admin/user.sche
 
 let BlackList = {
     MOBILE : "mobile",
-    COURSES : "Courses",
     OTP : "otp",
-    ROLES : "Roles",
-    BILLS : "bills",
-    DISCOUNT : "discount"
+    ROLES : "Role",
 }
 Object.freeze(BlackList)
 class UserController extends Controller{
@@ -57,6 +54,22 @@ class UserController extends Controller{
                 StatusCode : HttpStatus.OK,
                 data : {
                     message : 'Profile updated successfully'
+                }
+            })
+        } catch (error) {
+            next(error)
+        }
+    }
+    async deleteUser (req,res,next) {
+        try {
+            const userID = req.params;
+            const deleteUserResults = await UserModel.deleteOne({_id: userID});
+            if(deleteUserResults.deletedCount == 0) 
+                throw createHttpError.InternalServerError("Deleted User Failed")
+            return res.status(HttpStatus.OK).json({
+                StatusCode : HttpStatus.OK,
+                data : {
+                    message : 'User Deleted successfully'
                 }
             })
         } catch (error) {
