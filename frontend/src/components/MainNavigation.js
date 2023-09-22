@@ -9,8 +9,11 @@ import styles from "./MainNavigation.module.css";
 
 function MainNavigation() {
   const token = useRouteLoaderData("root");
+
+  const userRole= localStorage.getItem('role')
+  console.log(userRole)
   console.log(token);
-  console.log(!!token);
+  console.log(token !== null);
 
   return (
     <header className={styles.header}>
@@ -23,7 +26,7 @@ function MainNavigation() {
                 Home
               </NavLink>
             </li>
-            {token !== null && (
+            {(token !== null && userRole === 'ADMIN') && (
               <li>
                 <NavLink className={styles.navBtnLink} to="admin/">
                   Admin

@@ -1,3 +1,17 @@
+# [1.15.0](https://github.com/G2-tech-intern/Store-project/compare/1.14.0...1.15.0) (2023-09-22)
+
+
+### Features
+
+* check user role ([edfcccd](https://github.com/G2-tech-intern/Store-project/commit/edfcccdbbac5db32f49f9e0373952b9475619739))
+
+# [1.14.0](https://github.com/G2-tech-intern/Store-project/compare/1.13.0...1.14.0) (2023-09-22)
+
+
+### Features
+
+* make changes ([afec4a4](https://github.com/G2-tech-intern/Store-project/commit/afec4a458c74dc2e03a8ca5e99974d7769a5ea97))
+
 # [1.13.0](https://github.com/G2-tech-intern/Store-project/compare/1.12.0...1.13.0) (2023-09-22)
 
 
