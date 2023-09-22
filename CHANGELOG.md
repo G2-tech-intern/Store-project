@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/G2-tech-intern/Store-project/compare/1.12.0...1.13.0) (2023-09-22)
+
+
+### Features
+
+* add funcionality to delte and show buttons ([a3fdf74](https://github.com/G2-tech-intern/Store-project/commit/a3fdf742adac348dfa5138ac7cc10159d26a2459))
+
 # [1.12.0](https://github.com/G2-tech-intern/Store-project/compare/1.11.0...1.12.0) (2023-09-22)
 
 
