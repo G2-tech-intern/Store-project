@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/G2-tech-intern/Store-project/compare/1.9.0...1.10.0) (2023-09-22)
+
+
+### Features
+
+* add delete func for user ([bed4bcf](https://github.com/G2-tech-intern/Store-project/commit/bed4bcfd224663a241d4ef0752d28064c4f8e3ba))
+
 # [1.9.0](https://github.com/G2-tech-intern/Store-project/compare/1.8.0...1.9.0) (2023-09-22)
 
 
