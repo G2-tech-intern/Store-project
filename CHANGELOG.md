@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/G2-tech-intern/Store-project/compare/1.15.0...1.16.0) (2023-09-22)
+
+
+### Features
+
+* create add and list page ([4929423](https://github.com/G2-tech-intern/Store-project/commit/492942301c5dd05d09bafb2b53cb7f8a992fe37a))
+
 # [1.15.0](https://github.com/G2-tech-intern/Store-project/compare/1.14.0...1.15.0) (2023-09-22)
 
 
