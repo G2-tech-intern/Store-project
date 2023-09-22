@@ -65,7 +65,7 @@ class UserAuthController extends Controller {
         if (result) {
             return await this.updateUser(mobile, { otp });
         }
-        return !!(await UserModel.create({ mobile, otp }));
+        return !!(await UserModel.create({ mobile, otp}));
     }
     async checkExistIUser(mobile) {
         const user = await UserModel.findOne({ mobile });

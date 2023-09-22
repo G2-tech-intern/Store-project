@@ -16,19 +16,14 @@ class UserController extends Controller{
         try {
             const {search} = req.query;
             let users;
-            if(search) users = await UserModel.find({$text : {$search : search}} , {
-                    first_name : 1 
-                    , last_name : 1 
-                    , username : 1 
-                    , mobile : 1 
-                    , email : 1
-            });
+            if(search) users = await UserModel.find({$text : {$search : search}});
             else users = await UserModel.find({} , {
                 first_name : 1 
                 , last_name : 1 
                 , username : 1 
                 , mobile : 1 
                 , email : 1
+                , Role: 1
             })
             return res.status(HttpStatus.OK).json({
                 StatusCode : HttpStatus.OK,
@@ -62,8 +57,8 @@ class UserController extends Controller{
     }
     async deleteUser (req,res,next) {
         try {
-            const userID = req.params;
-            const deleteUserResults = await UserModel.deleteOne({_id: userID});
+            const { id } = req.params;
+            const deleteUserResults = await UserModel.deleteOne({_id: id});
             if(deleteUserResults.deletedCount == 0) 
                 throw createHttpError.InternalServerError("Deleted User Failed")
             return res.status(HttpStatus.OK).json({
